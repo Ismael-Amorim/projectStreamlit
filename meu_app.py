@@ -15,8 +15,19 @@ def carregar_dados():
 
 with st.container():
     st.write("---")
+    st.subheader("Este é um gráfico de área.")
     qtd_dias = st.selectbox("Selecione o período", ["7D", "15D", "21D", "30D"])
     num_dias = int(qtd_dias.replace("D",""))
     dados = carregar_dados()
     dados = dados[-num_dias:]
     st.area_chart(dados, x="Data", y="Contratos")
+    
+with st.container():
+    st.write("---")
+    st.subheader("Este é um gráfico de colunas.")
+    st.bar_chart(dados,x="Data", y="Contratos")
+    
+with st.container():
+    st.write("---")
+    st.subheader("Este é um gráfico de linhas.")
+    st.line_chart(dados,x="Data", y="Contratos", height=0)
