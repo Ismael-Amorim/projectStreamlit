@@ -15,7 +15,7 @@ with guias[0]:
     st.title('Sobre')
     st.write("Atualmente aprofundo meus conhecimentos em Análise de Dados, tenho +4 anos de experiência na área.")
     st.write("Conhecimento intermediário em inglês.")
-    st.write("Como linguagem de programação tenho conhecimento em PHP, JavaScript, CSS, Bootstap, bando de dados SQL.")
+    st.write("Como linguagem de programação tenho conhecimento em PHP, JavaScript, CSS, Bootstap, banco de dados SQL.")
     st.write("Comecei na área com Excel, atualmente tenho fortes conhecimentos na ferramenta, os principais projetos profissionais em análise de dados que desenvolvi são:")
     st.write("Indicadores de atendimento,")
     st.write("Indicadores de entregas,")
