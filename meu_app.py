@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from PIL import Image
 
 st.set_page_config(
     page_title="Ismael Amorim Data Analyst"
@@ -13,14 +14,21 @@ guias = st.tabs(titulos_guias)
 
 with guias[0]:
     st.title('Sobre')
-    st.write("Atualmente aprofundo meus conhecimentos em Análise de Dados, tenho +4 anos de experiência na área.")
+    st.write("Atualmente aprofundo meus conhecimentos em Análise de Dados, tenho mais de 4 anos de experiência na área.")
     st.write("Conhecimento intermediário em inglês.")
     st.write("Como linguagem de programação tenho conhecimento em PHP, JavaScript, CSS, Bootstap, banco de dados SQL.")
-    st.write("Comecei na área com Excel, atualmente tenho fortes conhecimentos na ferramenta, os principais projetos profissionais em análise de dados que desenvolvi são:")
+    st.write("Comecei na área com Excel, atualmente tenho fortes conhecimentos na ferramenta. Os principais projetos profissionais em análise de dados que desenvolvi são:")
     st.write("Indicadores de atendimento,")
     st.write("Indicadores de entregas,")
     st.write("Indicadores de armazenamento.")
-    st.write("Até o momento, o Excel é meu ponto forte para análise dados. Estou aprofundando meus conhecimentos em Python e suas bibliotecas para análise de dados como Plotly, Streamlit, Dash e também SQL para ter um melhor desempenho em análises.")
+    st.write("Até o momento, o Excel é meu ponto forte para análise de dados. Estou aprofundando meus conhecimentos em Machine Learning e Python com suas bibliotecas para análise de dados como Pandas, Plotly, Streamlit, Dash e também SQL para ter um melhor desempenho em análises.")
+    st.write("---")
+    st.title("Ferramentas para análise de dados")
+    st.write("Excel")
+    st.write("Looker Studio")
+    st.write("Python")
+    st.write("Pandas")
+    st.write("SQL")
     st.write("---")
     st.title("Experiências")
     st.subheader("Autopeças OK Distribuidora Automotiva")
@@ -34,10 +42,11 @@ with guias[0]:
 
     
 with guias[1]:
-    st.header('Dashboards')
+    st.title('Dashboards')
     
     with st.container():
-        st.title("Dashboard de Contratos")
+        st.header("Dashboards com Python:")
+        st.subheader("Dashboard de Contratos")
         st.write("informações sobre os contratos fechados pela Amorim Systems do longo de maio.")
 
     @st.cache_data
@@ -63,6 +72,15 @@ with guias[1]:
         st.write("---")
         st.subheader("Gráfico de linhas.")
         st.line_chart(dados,x="Data", y="Contratos", height=0)
+        
+    with st.container():
+        st.header("Dashboards com Looker Studio:")
+        st.subheader("Dashboard Google Ads e Analytcs")
+        image1 = Image.open('Dashboard-2.jpg')
+        st.image(image1, caption='Análise completa')
+        image2 = Image.open('Dashboard-1.jpg')
+        st.image(image2, caption='Análise completa')
+        
         
 
  
